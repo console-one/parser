@@ -1,0 +1,62 @@
+{
+  "name": "@console-one/parser",
+  "version": "0.1.0",
+  "description": "Runtime-composable pushdown parser: scanner primitives (KMP Match, Any/Not char classes, ordered-choice Race), declarative grammar DSL, in-stream aggregation, and meta-language embedding.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/console-one/parser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/console-one/parser/issues"
+  },
+  "homepage": "https://github.com/console-one/parser#readme",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./syntaxes": {
+      "types": "./dist/syntaxes/index.d.ts",
+      "import": "./dist/syntaxes/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "smoke": "node dist/smoke.js",
+    "test": "vitest run",
+    "prepublishOnly": "npm run clean && npm run build && npm run smoke"
+  },
+  "keywords": [
+    "parser",
+    "scanner",
+    "grammar",
+    "pushdown-automaton",
+    "kmp",
+    "composable-grammar",
+    "meta-language",
+    "embedded-dsl",
+    "runtime-grammar"
+  ],
+  "author": "Andrew Chalmers",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.19.39",
+    "@types/uuid": "^10.0.0",
+    "typescript": "^5.9.3",
+    "vitest": "^1.6.1"
+  },
+  "dependencies": {
+    "@console-one/multimap": "file:../multimap",
+    "heap-js": "^2.7.1",
+    "uuid": "^13.0.0"
+  }
+}
