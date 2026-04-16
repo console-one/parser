@@ -55,7 +55,7 @@
     "vitest": "^1.6.1"
   },
   "dependencies": {
-    "@console-one/multimap": "file:../multimap",
+    "@console-one/multimap": "^0.2.0",
     "heap-js": "^2.7.1",
     "uuid": "^13.0.0"
   }
