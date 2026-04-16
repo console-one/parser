@@ -17,10 +17,6 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
-    },
-    "./syntaxes": {
-      "types": "./dist/syntaxes/index.d.ts",
-      "import": "./dist/syntaxes/index.js"
     }
   },
   "files": [
