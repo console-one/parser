@@ -1,6 +1,6 @@
 {
   "name": "@console-one/parser",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Runtime-composable pushdown parser: scanner primitives (KMP Match, Any/Not char classes, ordered-choice Race), declarative grammar DSL, in-stream aggregation, and meta-language embedding.",
   "repository": {
     "type": "git",
