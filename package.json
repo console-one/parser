@@ -25,11 +25,11 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.build.json",
     "clean": "rm -rf dist",
     "smoke": "node dist/smoke.js",
-    "test": "vitest run",
-    "prepublishOnly": "npm run clean && npm run build && npm run smoke"
+    "test": "node dist/test-runner.js",
+    "prepublishOnly": "npm run clean && npm run build && npm run test"
   },
   "keywords": [
     "parser",
@@ -47,10 +47,10 @@
   "devDependencies": {
     "@types/node": "^20.19.39",
     "@types/uuid": "^10.0.0",
-    "typescript": "^5.9.3",
-    "vitest": "^1.6.1"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@console-one/assessable": "file:../assessable",
     "@console-one/multimap": "^0.2.0",
     "heap-js": "^2.7.1",
     "uuid": "^13.0.0"
